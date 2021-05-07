@@ -1,6 +1,6 @@
 # npm resolution error report
 
-2021-05-06T03:41:17.988Z
+2021-05-07T02:04:55.605Z
 
 While resolving: telabel@0.1.0
 Found: node-sass@5.0.0
@@ -26,7 +26,7 @@ Raw JSON explanation object:
     "whileInstalling": {
       "name": "telabel",
       "version": "0.1.0",
-      "path": "/Users/sugiyamaakari/Desktop/next/telabel/telabel_official"
+      "path": "/Users/sugiyamaakari/Downloads/telabel/telabel_official"
     },
     "location": "node_modules/node-sass",
     "dependents": [
@@ -35,7 +35,7 @@ Raw JSON explanation object:
         "name": "node-sass",
         "spec": "^5.0.0",
         "from": {
-          "location": "/Users/sugiyamaakari/Desktop/next/telabel/telabel_official"
+          "location": "/Users/sugiyamaakari/Downloads/telabel/telabel_official"
         }
       }
     ]
@@ -51,7 +51,7 @@ Raw JSON explanation object:
       "whileInstalling": {
         "name": "telabel",
         "version": "0.1.0",
-        "path": "/Users/sugiyamaakari/Desktop/next/telabel/telabel_official"
+        "path": "/Users/sugiyamaakari/Downloads/telabel/telabel_official"
       },
       "location": "node_modules/@zeit/next-sass",
       "dependents": [
@@ -60,7 +60,7 @@ Raw JSON explanation object:
           "name": "@zeit/next-sass",
           "spec": "^1.0.1",
           "from": {
-            "location": "/Users/sugiyamaakari/Desktop/next/telabel/telabel_official"
+            "location": "/Users/sugiyamaakari/Downloads/telabel/telabel_official"
           }
         }
       ]

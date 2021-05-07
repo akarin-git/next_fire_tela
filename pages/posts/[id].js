@@ -24,9 +24,13 @@ export default function Post({ postData }) {
         </Box>
         <Box dangerouslySetInnerHTML={{ __html: postData.contentHtml }} />
 
-        <Box bg="#fff" color="black" my="20" p="5" align="center">
+      <Box align="center">
+      <Link href={`/event/${postData.tela}`} align="center">
+        <Box bg="#fff" color="black" my="20" p="5" width="250px">
           btn
         </Box>
+      </Link>
+      </Box>
 
       <Flex justifyContent="flex-end">
       <Box mr='1' _hover={{
@@ -46,10 +50,6 @@ export default function Post({ postData }) {
         </TwitterShareButton>
       </Box>
 
-        {/* <InstapaperShareButton url={`https://telabel-official-q1x2tx72h-ushitaku.vercel.app/posts/${postData.id}`}>
-        <Image p="" src={'https://res.cloudinary.com/telabel/image/upload/v1618401644/instergram_oug8df.png'} alt='Instagram'
-                width={''} height={''} />
-        </InstapaperShareButton> */}
       </Flex>
           <Link href="/posts">
             <Button colorScheme="purple">← 記事一覧に戻る</Button>

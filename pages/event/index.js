@@ -2,13 +2,11 @@ import firebase from '../../lib/db';
 import React from 'react';
 import Link from 'next/link';
 import EventCard from '../../components/EventCard'
-import {getAllUserNamesPaths} from '../../lib/events'
 
 export default function event({AllEvents}) {
 // console.log(AllEvents);
     
     return (
-        
         <div>
            {AllEvents.map(eventpost => <EventCard key={eventpost.id} eventpost={eventpost}/>)}
         </div>
@@ -17,7 +15,12 @@ export default function event({AllEvents}) {
 
 export async function getServerSideProps(context) {
   // 外部APIからデータフェッチ
-  const querySnap = await firebase.firestore().collection('event').orderBy('timestamp',"desc").get()
+  const querySnap = await firebase
+    .firestore()
+    .collection('event')
+    .orderBy('timestamp',"desc")
+    .get();
+
     const AllEvents = querySnap.docs.map(docSnap => {
         return {
             ...docSnap.data(),

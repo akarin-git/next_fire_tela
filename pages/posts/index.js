@@ -17,7 +17,6 @@ export async function getServerSideProps(context) {
 export default function Home({ allPostsData }) {
   return (
     <>
-    {/* <Layout home> */}
       <Head>
         <link rel="icon" href="https://res.cloudinary.com/telabel/image/upload/v1618286838/fabicon_jr2jqg.png" />
       </Head>
@@ -25,13 +24,13 @@ export default function Home({ allPostsData }) {
         <title>記事一覧</title>
       </Head>
       <Box p='20' bg='#27214D' align='center'>
-      <Image p="" src={'https://res.cloudinary.com/telabel/image/upload/v1619105306/articletitle_jvcnlp.svg'} alt='Facebook'
+      <Image src={'https://res.cloudinary.com/telabel/image/upload/v1619105306/articletitle_jvcnlp.svg'} alt='Facebook'
                 width={'397'} height={'54'} />
       </Box>
       <Box bg='#27214D'>
        <Box w='80%' m='auto'>
         <Grid justifyItems='center' alignItems='center' templateColumns="repeat(3, 1fr)" gap={6} >
-          {allPostsData.map((({id,date,title,location,cardImage})=>
+          {allPostsData.map((({id,date,title,location,cardImage,tela})=>
         <Link href={`/posts/${id}`}
         _hover={{ textDecoration: "none" }} >
           <Box 
