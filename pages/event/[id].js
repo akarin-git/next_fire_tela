@@ -1,30 +1,43 @@
 import firebase from '../../lib/db';
+import TelaEventCard from '../../components/TelaEventCard';
+import { Container,Box,Heading } from "@chakra-ui/react";
+
 
 
 export default function EventPost({Events}) {
-    // console.log(Events[0]);
     return (
-        <>
+        <Box bg="#27214D">
         {/* 情報がある時 */}
         {Events[0] ? (
-            <>
-            <p>{Events[0].name}</p>
-            <p>{Events[0].email}</p>
-            <p>{Events[0].group}</p>
-            <p>{Events[0].money}</p>
-            <p>{Events[0].name}</p>
-            <p>{Events[0].tela}</p>
-            <p>{Events[0].content}</p>
-            </>
+          <>
+        <Box align="center" my="20">
+          <Heading as="h2" size="xl" color="#fff" >
+          {Events[0].tela}イベント情報
+          </Heading>
+        </Box>
+        <Box bg={"#F9FAFB"} w="90%" m="auto" h="600px">
+        
+            <TelaEventCard key={Events[0].id} event={Events[0]}/>
+         
+          </Box>
+          </>
         ):(
           // 情報がない時に表示される文言
             <>
-            <>hi</>
-            <p>イベント情報はありません</p>
+          <Box align="center" my="20">
+          <Heading as="h2" size="xl" color="#fff" >
+          イベント情報
+          </Heading>
+        </Box>
+        <Box bg={"#F9FAFB"} w="90%" m="auto" h="600px">
+        
+            イベントがありません
+         
+          </Box>
             </>
         )}
 
-        </>
+        </Box>
     )
 }
 

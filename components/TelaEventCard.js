@@ -1,16 +1,15 @@
- import { Box, Container,Flex,Heading,chakra,Link,Text,Grid} from "@chakra-ui/react";
+import { Box, Container,Flex,Heading,chakra,Link,Text,Grid} from "@chakra-ui/react";
 
- 
- export default function EventCard({eventpost}) {
-      console.log(eventpost);
-     return (
-    <>
+
+export default function TelaEventCard({event}) {
+    // console.log(event);
+    return (
     <Box align="center">
-    <Link href={`/event/${eventpost.tela}`}>
+    {/* <Link　href={`/event/${event.tela}`}> */}
      <Flex 
-     key={eventpost.id}
-      p={5}
-      w="400px"
+     key={event.id}
+      p={20}
+      w="80%"
       alignItems="center"
       justifyContent="center"
     >
@@ -28,7 +27,7 @@
             fontSize="sm"
             color={"gray.800"}
           >
-            {eventpost.group}
+            {event.group}
           </chakra.span>
           <chakra.span
             bg={"brand.200"}
@@ -50,14 +49,14 @@
             mt={2}
             color={"gray.800"}
           >
-            {eventpost.content}
+            {event.content}
           </chakra.h1>
           <chakra.p
             fontSize="sm"
             mt={2}
             color={"gray.600"}
           >
-           {eventpost.content}
+           {event.content}
           </chakra.p>
         </Box>
 
@@ -67,7 +66,7 @@
             mt={2}
             color={"gray.700"}
           >
-            <span>日付:{eventpost.date}</span>
+            <span>日付:{event.date}</span>
            
             <Text
               mx={10}
@@ -76,7 +75,7 @@
               color={"brand.600"}
               wordBreak="break-word"
             >
-              {eventpost.email}
+              {event.email}
             </Text>
           </Flex>
 
@@ -100,9 +99,15 @@
         </Box>
       </Box>
     </Flex>
-      </Link> 
+    {/* </Link> */}
+    
+            {/* <p>{event.name}</p>
+            <p>{eventpost.date}</p>
+            <p>{eventpost.money}</p>
+            <p>{eventpost.email}</p>
+            <p>{eventpost.comment}</p>
+            <p>{eventpost.web}</p> */}
+            
         </Box>
-         </>
-     )
- }
- 
+    )
+}
