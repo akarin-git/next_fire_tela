@@ -1,4 +1,4 @@
-import { Box, Container,Flex,Heading,chakra,Link,Text,Grid} from "@chakra-ui/react";
+import { Box, Container,Flex,Heading,chakra,Link,Text,Grid,Button} from "@chakra-ui/react";
 
 
 export default function TelaEventCard({event}) {
@@ -30,7 +30,7 @@ export default function TelaEventCard({event}) {
             {event.group}
           </chakra.span>
           <chakra.span
-            bg={"brand.200"}
+            bg={"#fff3c7"}
             color={"brand.800"}
             px={3}
             py={1}
@@ -78,35 +78,18 @@ export default function TelaEventCard({event}) {
               {event.email}
             </Text>
           </Flex>
-
-          <Flex alignItems="center" justifyContent="center" mt={4}>
-            <Link
-              mr={2}
-              color={"gray.800"}
-              _hover={{ color: "gray.700" }}
-              cursor="pointer"
-            >
-            </Link>
-
-            <Link
-              mr={2}
-              color={"gray.800"}
-              _hover={{ color: "gray.700" }}
-              cursor="pointer"
-            >
-            </Link>
-          </Flex>
         </Box>
+
+        <Box align="right">
+            <Link href={`${event.sns}`}>
+            <Button colorScheme="purple" variant="solid" align="right" w="200px">
+              イベント詳細ページ
+            </Button>
+          </Link>
+          </Box>
       </Box>
     </Flex>
-    {/* </Link> */}
-    
-            {/* <p>{event.name}</p>
-            <p>{eventpost.date}</p>
-            <p>{eventpost.money}</p>
-            <p>{eventpost.email}</p>
-            <p>{eventpost.comment}</p>
-            <p>{eventpost.web}</p> */}
+   
             
         </Box>
     )

@@ -15,7 +15,7 @@ export default function event({AllEvents}) {
           イベント一覧
           </Heading>
         </Box>
-        <Box my="20" bg="#F9FAFB" h="600px" w="90%" m="auto">
+        <Box my="20" bg="#F9FAFB" h="600px" w="95%" m="auto">
         <Grid templateColumns="repeat(3, 1fr)" gap={3} m="auto" py="20">
            {AllEvents.map(eventpost => <EventCard key={eventpost.id} eventpost={eventpost}/>)}
         </Grid>

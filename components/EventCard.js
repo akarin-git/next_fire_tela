@@ -1,4 +1,4 @@
- import { Box, Container,Flex,Heading,chakra,Link,Text,Grid} from "@chakra-ui/react";
+ import { Box, Container,Flex,Heading,chakra,Link,Text,Grid,Button} from "@chakra-ui/react";
 
  
  export default function EventCard({eventpost}) {
@@ -9,8 +9,8 @@
     <Link href={`/event/${eventpost.tela}`}>
      <Flex 
      key={eventpost.id}
-      p={5}
-      w="400px"
+      p={2}
+      w="430px"
       alignItems="center"
       justifyContent="center"
     >
@@ -22,6 +22,7 @@
         bg={"white"}
         shadow="md"
         rounded="md"
+        h="450px"
       >
         <Flex justifyContent="space-between" alignItems="center">
           <chakra.span
@@ -31,8 +32,8 @@
             {eventpost.group}
           </chakra.span>
           <chakra.span
-            bg={"brand.200"}
-            color={"brand.800"}
+            bg={"#fff3c7"}
+            color={"#4d4d4d"}
             px={3}
             py={1}
             rounded="full"
@@ -43,7 +44,7 @@
           </chakra.span>
         </Flex>
 
-        <Box align="left" p="10">
+        <Box align="left" p="10" h="300px">
           <chakra.h1
             fontSize="lg"
             fontWeight="bold"
@@ -78,26 +79,17 @@
             >
               {eventpost.email}
             </Text>
+
           </Flex>
 
-          <Flex alignItems="center" justifyContent="center" mt={4}>
-            <Link
-              mr={2}
-              color={"gray.800"}
-              _hover={{ color: "gray.700" }}
-              cursor="pointer"
-            >
-            </Link>
-
-            <Link
-              mr={2}
-              color={"gray.800"}
-              _hover={{ color: "gray.700" }}
-              cursor="pointer"
-            >
-            </Link>
-          </Flex>
         </Box>
+        <Box align="right" mt="5">
+           <Link href={`${eventpost.sns}`}>
+            <Button colorScheme="purple" variant="solid" align="right">
+              イベント詳細ページ
+            </Button>
+            </Link>
+          </Box>
       </Box>
     </Flex>
       </Link> 
